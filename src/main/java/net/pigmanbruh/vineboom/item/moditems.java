@@ -5,7 +5,6 @@ import com.google.common.collect.Lists;
 import com.mojang.datafixers.util.Pair;
 import net.pigmanbruh.vineboom.Main;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
