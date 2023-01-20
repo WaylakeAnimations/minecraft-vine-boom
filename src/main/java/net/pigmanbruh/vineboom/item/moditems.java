@@ -9,11 +9,9 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.util.Identifier;
 
 public class moditems {
- 
-    // an instance of our new item
+
     public static final Item VINE_BOOM = new Item(new FabricItemSettings());
- 
-    @Override
+
     public void onInitialize() {
         Registry.register(Registries.ITEM, new Identifier(MOD_ID, "vine_boom"), VINE_BOOM);
     }
