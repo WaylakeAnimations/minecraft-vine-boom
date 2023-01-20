@@ -1,5 +1,6 @@
 package net.pigmanbruh.vineboom.item;
 
+import net.fabricmc.api.ModInitializer;
 import com.google.common.collect.Lists;
 import com.mojang.datafixers.util.Pair;
 import net.pigmanbruh.vineboom.Main;
@@ -20,7 +21,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import java.util.List;
 import java.util.Map;
 
-public class moditems {
+public class moditems implements ModInitializer {
 
     public static final Item VINE_BOOM_ITEM = new Item(new FabricItemSettings());
 
