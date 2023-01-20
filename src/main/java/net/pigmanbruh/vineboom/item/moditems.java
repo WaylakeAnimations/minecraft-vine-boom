@@ -8,7 +8,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.util.Identifier;
 
-public class moditems implements ModInitializer {
+public class moditems {
  
     // an instance of our new item
     public static final Item VINE_BOOM = new Item(new FabricItemSettings());
