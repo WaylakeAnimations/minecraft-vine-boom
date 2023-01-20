@@ -14,6 +14,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import java.util.List;
 import java.util.Map;
 
