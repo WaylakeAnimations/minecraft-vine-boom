@@ -1,5 +1,6 @@
 package net.pigmanbruh.vineboom.mixin;
 
+import net.pigmanbruh.vineboom.Main;
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -10,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class mixin {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		vineboom.LOGGER.info("This line is printed by vineboom's mixin");
+		Main.LOGGER.info("This line is printed by vineboom's mixin");
 	}
 }
