@@ -20,11 +20,11 @@ import net.minecraft.registry.entry.RegistryEntry;
 import java.util.List;
 import java.util.Map;
 
-public class moditems implements ModInitializer {
+public class moditems {
 
     public static final Item VINE_BOOM_ITEM = new Item(new FabricItemSettings());
 
     public void RegisterItem() {
-        Registry.register(Registries.ITEM, new Identifier("vineboom", "vine_boom_item"), VINE_BOOM_ITEM);
+        Registry.register(Registry.ITEM, new Identifier("vineboom", "vine_boom_item"), VINE_BOOM_ITEM);
     }
 }
