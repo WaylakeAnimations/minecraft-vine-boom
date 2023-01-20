@@ -26,5 +26,6 @@ public class moditems {
 
     public void onInitialize() {
         Registry.register(Registries.ITEM, new Identifier("vineboom", "vine_boom_item"), VINE_BOOM_ITEM);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> entries.add(VINE_BOOM_ITEM));
     }
 }
