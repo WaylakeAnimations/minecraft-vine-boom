@@ -21,9 +21,22 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    - name: Cache/Uncache
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/loom-cache
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
     - name: executable permission for gradlew
       shell: bash
       run: chmod +x ./gradlew
+    - name: generate mc sources
+      shell: bash
+      run: ./gradlew genSources
     - name: build
       shell: bash
       run: ./gradlew build
