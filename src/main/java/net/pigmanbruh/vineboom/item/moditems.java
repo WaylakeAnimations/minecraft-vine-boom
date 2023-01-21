@@ -25,5 +25,4 @@ public class moditems {
     public static final Item VINE_BOOM_ITEM =
       Registry.register(Registries.ITEM, new Identifier("vineboom", "vine_boom_item"),
         new Item(new FabricItemSettings()));
-    }
 }
