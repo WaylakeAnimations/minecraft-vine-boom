@@ -26,6 +26,6 @@ public class moditems {
 
     private static Item registerItem(String name, Item item, ItemGroup group) {
         ItemsGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
-        return Registry.register(Registries.ITEM, new Identifier("vineboom", "vine_boom_item", VINE_BOOM_ITEM);
+        return Registry.register(Registries.ITEM, new Identifier("vineboom", "vine_boom_item", VINE_BOOM_ITEM));
     }
 }
