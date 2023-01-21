@@ -34,9 +34,6 @@ jobs:
     - name: executable permission for gradlew
       shell: bash
       run: chmod +x ./gradlew
-    - name: generate mc sources
-      shell: bash
-      run: ./gradlew genSources
     - name: build
       shell: bash
       run: ./gradlew build
