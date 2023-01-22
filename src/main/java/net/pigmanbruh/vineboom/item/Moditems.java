@@ -15,4 +15,9 @@ public class Moditems {
     public static final Item VINE_BOOM_ITEM =
       Registry.register(Registries.ITEM, new Identifier("vineboom", "vine_boom_item"),
         new Item(new FabricItemSettings()));
+    
+    public static void registerModItems() {
+        TutorialMod.LOGGER.debug("Registering Mod Items for " + MOD_ID);
+
+        addItemsToItemGroups();
 }
