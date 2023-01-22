@@ -21,7 +21,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import java.util.List;
 import java.util.Map;
 
-public class moditems {
+public class Moditems {
 
     public static final Item VINE_BOOM_ITEM =
       Registry.register(Registries.ITEM, new Identifier("vineboom", "vine_boom_item"),
