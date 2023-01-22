@@ -14,7 +14,12 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 
-public class Main {
-	public static final String MOD_ID = "vineboom";
-	public static final Logger LOGGER = LoggerFactory.getLogger("vineboom");
+public class Main implements ModInitializer {
+    public static final String MOD_ID = "vineboom";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+    @Override
+    public void onInitialize() {
+
+    }
 }
