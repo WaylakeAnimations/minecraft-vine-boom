@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "Vine Boom",
-  "description": "Vine boom item",
+  "description": "This is my first mod, the goal of this mod is to add an item that make vine boom sound when right-clicked",
   "authors": [
     "PigmanBruh"
   ],
   "contact": {
     "homepage": "",
-    "sources": ""
+    "sources": "https://github.com/PigmanYT3531/minecraft-vine-boom"
   },
 
   "license": "CC0-1.0",
