@@ -25,7 +25,7 @@ public class Moditems {
     }
     
     public static void registerModItems() {
-        Main.LOGGER.debug("Registering Mod Items for Vineboom mod);
+        Main.LOGGER.debug("Registering Mod Items for Vineboom mod");
 
         addItemsToItemGroups();
     }
