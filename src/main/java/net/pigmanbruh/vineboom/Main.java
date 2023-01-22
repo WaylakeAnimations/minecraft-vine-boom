@@ -1,5 +1,6 @@
 package net.pigmanbruh.vineboom;
 
+import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import net.pigmanbruh.vineboom.item.Moditems;
