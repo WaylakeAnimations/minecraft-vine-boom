@@ -37,3 +37,8 @@ jobs:
     - name: build
       shell: bash
       run: ./gradlew build
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: sodium-artifacts-${{ steps.ref.outputs.branch }}
+        path: build/libs/*[0-9].jar
