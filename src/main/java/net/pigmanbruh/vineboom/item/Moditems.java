@@ -20,4 +20,5 @@ public class Moditems {
         TutorialMod.LOGGER.debug("Registering Mod Items for " + MOD_ID);
 
         addItemsToItemGroups();
+    }
 }
