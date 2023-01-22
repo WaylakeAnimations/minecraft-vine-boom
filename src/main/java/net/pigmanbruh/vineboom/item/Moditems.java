@@ -36,16 +36,14 @@ public class Moditems {
     private static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
     private static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
 
-    public static final {
-        Registry.register(Registries.SOUND_EVENT, Vineboomsound.VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
-    }
+    public static final Registry.register(Registries.SOUND_EVENT, Vineboomsound.VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             world.playSound(
                     null, // Player - if non-null, will play sound for every nearby player *except* the specified player
-                    (player.world, player.x, player.y, player.z, stack),
+                    playerPos,
                     Moditems.VINE_BOOM_SOUND_EVENT,
                     SoundCategory.PLAYER,
                     1f, //Volume multiplier
