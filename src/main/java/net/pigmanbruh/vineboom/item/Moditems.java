@@ -17,7 +17,12 @@ public class Moditems {
         new Item(new FabricItemSettings()));
     
     public static void addItemsToItemGroup() {
-        addToItemGroup(ItemGroups.TOOLS, VINE_BOOM_ITEM);    
+        addToItemGroup(ItemGroups.TOOLS, VINE_BOOM_ITEM);
+    }
+    
+    private static void addToItemGroup(ItemGroup group, Item item) {
+        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
+    }
     
     public static void registerModItems() {
         TutorialMod.LOGGER.debug("Registering Mod Items for " + MOD_ID);
