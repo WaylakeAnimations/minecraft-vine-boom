@@ -16,7 +16,7 @@ public class Moditems {
       Registry.register(Registries.ITEM, new Identifier("vineboom", "vine_boom_item"),
         new Item(new FabricItemSettings()));
     
-    public static void addItemsToItemGroup() {
+    public static void addItemsToItemGroups() {
         addToItemGroup(ItemGroups.TOOLS, VINE_BOOM_ITEM);
     }
     
