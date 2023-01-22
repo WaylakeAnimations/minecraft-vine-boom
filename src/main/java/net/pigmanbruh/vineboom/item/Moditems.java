@@ -25,7 +25,7 @@ public class Moditems {
     }
     
     public static void registerModItems() {
-        TutorialMod.LOGGER.debug("Registering Mod Items for " + MOD_ID);
+        Main.LOGGER.debug("Registering Mod Items for Vineboom mod);
 
         addItemsToItemGroups();
     }
