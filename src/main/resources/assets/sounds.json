@@ -1,0 +1,8 @@
+{
+  "vine_boom": {
+    "subtitle": "subtitles.vineboom.vine_boom_sound",
+    "sounds": [
+      "vineboom:vine_boom_sound"
+    ]
+  }
+}

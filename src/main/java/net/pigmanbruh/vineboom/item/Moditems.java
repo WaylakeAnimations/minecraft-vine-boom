@@ -9,6 +9,9 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.World;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.gui.screen.Screen;
 
 public class Moditems {
 
@@ -28,5 +31,26 @@ public class Moditems {
         Main.LOGGER.debug("Registering Mod Items for Vineboom mod");
 
         addItemsToItemGroups();
+    }
+
+    private static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
+    private static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
+
+    Registry.register(Registries.SOUND_EVENT, Vineboomsound.VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        if(!world.isClient() && hand == Hand.MAIN_HAND) {
+            world.playSound(
+                    null, // Player - if non-null, will play sound for every nearby player *except* the specified player
+                    playerPos
+                    Moditems.VINE_BOOM_SOUND_EVENT
+                    SoundCategory.PLAYER,
+                    1f, //Volume multiplier
+                    1f // Pitch multiplier
+            );
+            user.getItemCooldownManager().set(this, 20);
+        }
+        return super.use(world, user, hand);
     }
 }
