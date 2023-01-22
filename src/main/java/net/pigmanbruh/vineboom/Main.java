@@ -11,6 +11,6 @@ public class Main implements ModInitializer {
 
     @Override
     public void onInitialize() {
-		ModItems.registerModItems();
+        Moditems.registerModItems();
     }
 }
