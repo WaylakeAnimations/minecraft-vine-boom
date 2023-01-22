@@ -43,8 +43,8 @@ public class Moditems {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             world.playSound(
                     null, // Player - if non-null, will play sound for every nearby player *except* the specified player
-                    playerPos
-                    Moditems.VINE_BOOM_SOUND_EVENT
+                    (player.world, player.x, player.y, player.z, stack),
+                    Moditems.VINE_BOOM_SOUND_EVENT,
                     SoundCategory.PLAYER,
                     1f, //Volume multiplier
                     1f // Pitch multiplier
