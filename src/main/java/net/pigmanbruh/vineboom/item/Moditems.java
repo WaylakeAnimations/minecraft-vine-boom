@@ -21,7 +21,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;
+import net.minecraft.client.network.PendingUpdateManager.PendingUpdate;
 
 public class Moditems {
 
@@ -55,7 +55,7 @@ public class Moditems {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             world.playSound(
                 null, // Player - if non-null, will play sound for every nearby player *except* the specified player
-                PlayerPositionLookS2CPacket.x, PlayerPositionLookS2CPacket.y, PlayerPositionLookS2CPacket.z,
+                PendingUpdate.playerPos,
                 Moditems.VINE_BOOM_SOUND_EVENT,
                 SoundCategory.PLAYERS,
                 1f, //Volume multiplier
