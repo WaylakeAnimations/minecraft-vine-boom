@@ -17,6 +17,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraft.util.ActionResult;
+import net.minecraft.sound.SoundCategory;
 
 public class Moditems {
 
