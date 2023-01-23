@@ -1,6 +1,7 @@
 package net.pigmanbruh.vineboom.mixin;
 
 import net.pigmanbruh.vineboom.Main;
+
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
