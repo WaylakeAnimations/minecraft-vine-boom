@@ -46,7 +46,7 @@ public class Moditems {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             world.playSound(
                 null,
-                ~, ~, ~,
+                "~", "~", "~",
                 Vineboomsound.VINE_BOOM_SOUND_EVENT,
                 SoundCategory.PLAYERS,
                 1f,// Volume multiplier
