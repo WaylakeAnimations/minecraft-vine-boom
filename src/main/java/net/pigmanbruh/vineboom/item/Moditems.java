@@ -20,7 +20,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.util.Hand;
-
+import net.minecraft.util.TypedActionResult;
 
 public class Moditems {
 
@@ -44,8 +44,6 @@ public class Moditems {
 
     private static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
     private static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
-
-    public static SoundEvent VINE_BOOM_SOUND_EVENT = registerSoundEvent("vine_boom_sound");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(Main.MOD_ID, name);
