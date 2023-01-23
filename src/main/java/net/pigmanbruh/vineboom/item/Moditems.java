@@ -14,6 +14,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+import net.minecraft.util.ActionResult;
 
 public class Moditems {
 
@@ -43,17 +46,18 @@ public class Moditems {
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = new Identifier(Main.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, new SoundEvent(id));
+    }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             world.playSound(
-                    null, // Player - if non-null, will play sound for every nearby player *except* the specified player
-                    playerPos,
-                    Moditems.VINE_BOOM_SOUND_EVENT,
-                    SoundCategory.PLAYER,
-                    1f, //Volume multiplier
-                    1f // Pitch multiplier
+                null, // Player - if non-null, will play sound for every nearby player *except* the specified player
+                playerPos,
+                Moditems.VINE_BOOM_SOUND_EVENT,
+                SoundCategory.PLAYER,
+                1f, //Volume multiplier
+                1f // Pitch multiplier
             );
             user.getItemCooldownManager().set(this, 20);
         }
