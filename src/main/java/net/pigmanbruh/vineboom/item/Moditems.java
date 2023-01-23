@@ -12,11 +12,13 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 
 public class Moditems {
 
     public static final Item VINE_BOOM_ITEM =
-      Registry.register(Registries.ITEM, new Identifier("vineboom", "vine_boom_item"),
+      Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "vine_boom_item"),
         new Item(new FabricItemSettings()));
     
     public static void addItemsToItemGroups() {
@@ -28,7 +30,7 @@ public class Moditems {
     }
     
     public static void registerModItems() {
-        Main.LOGGER.debug("Registering Mod Items for Vineboom mod");
+        Main.LOGGER.debug("Registering Mod Items for " + Main.MOD_ID + " mod");
 
         addItemsToItemGroups();
     }
@@ -36,7 +38,11 @@ public class Moditems {
     private static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
     private static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
 
-    public static final Registry.register(Registries.SOUND_EVENT, Vineboomsound.VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
+    public static SoundEvent VINE_BOOM_SOUND_EVENT = registerSoundEvent("vine_boom_sound");
+
+    private static SoundEvent registerSoundEvent(String name) {
+        Identifier id = new Identifier(Main.MOD_ID, name);
+        return Registry.register(Registries.SOUND_EVENT, id, new SoundEvent(id));
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
