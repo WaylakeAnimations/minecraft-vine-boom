@@ -44,14 +44,7 @@ public class Moditems {
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
-            world.playSound(
-                null,
-                "~", "~", "~",
-                Vineboomsound.VINE_BOOM_SOUND_EVENT,
-                SoundCategory.PLAYERS,
-                1f,// Volume multiplier
-                1f // Pitch multiplier
-            );
+            playSound(Vineboomsound.VINE_BOOM_SOUND_EVENT, SoundCategory.PLAYERS, 1f, 1f)
             user.ItemCooldownManager().set(this, 20);
         }
         return super.use(world, user, hand);
