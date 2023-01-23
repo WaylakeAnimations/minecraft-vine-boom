@@ -45,10 +45,11 @@ public class Moditems {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             world.playSound(
-                null, // Player - if non-null, will play sound for every nearby player *except* the specified player
+                null,
+                ~, ~, ~,
                 Vineboomsound.VINE_BOOM_SOUND_EVENT,
                 SoundCategory.PLAYERS,
-                1f, //Volume multiplier
+                1f,// Volume multiplier
                 1f // Pitch multiplier
             );
             user.ItemCooldownManager().set(this, 20);

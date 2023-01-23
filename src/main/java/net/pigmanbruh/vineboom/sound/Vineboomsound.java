@@ -11,8 +11,8 @@ import net.minecraft.util.Identifier;
 
 public class Vineboomsound implements ModInitializer {
 
-    private static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
-    private static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
+    public static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
+    public static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
 
     @Override
     public void onInitialize(){
