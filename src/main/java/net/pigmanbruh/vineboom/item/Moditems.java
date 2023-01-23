@@ -21,6 +21,8 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 
 public class Moditems {
 
@@ -45,7 +47,7 @@ public class Moditems {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             playSound(Vineboomsound.VINE_BOOM_SOUND_EVENT, SoundCategory.PLAYERS, 1f, 1f);
-            user.ItemCooldownManager().set(this, 20);
+            user.getItemCooldownManager().set(this, 20);
         }
         return super.use(world, user, hand);
     }
