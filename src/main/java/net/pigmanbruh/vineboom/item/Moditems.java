@@ -61,7 +61,7 @@ public class Moditems {
                 1f, //Volume multiplier
                 1f // Pitch multiplier
             );
-            user.getItemCooldownManager().set(this, 20);
+            user.ItemCooldownManager().set(this, 20);
         }
         return super.use(world, user, hand);
     }
