@@ -12,8 +12,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraft.util.ActionResult;
@@ -21,7 +19,6 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;
 
 public class Moditems {
 
@@ -43,20 +40,11 @@ public class Moditems {
         addItemsToItemGroups();
     }
 
-    private static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
-    private static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
-
-    private static SoundEvent registerSoundEvent(String name) {
-        Identifier id = new Identifier(Main.MOD_ID, name);
-        return Registry.register(Registries.SOUND_EVENT, id, new SoundEvent(id));
-    }
-
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             world.playSound(
                 null, // Player - if non-null, will play sound for every nearby player *except* the specified player
-                PlayerPositionLookS2CPacket.getX, PlayerPositionLookS2CPacket.getY, PlayerPositionLookS2CPacket.getZ,
-                Moditems.VINE_BOOM_SOUND_EVENT,
+                Vineboomsound.VINE_BOOM_SOUND_EVENT,
                 SoundCategory.PLAYERS,
                 1f, //Volume multiplier
                 1f // Pitch multiplier
