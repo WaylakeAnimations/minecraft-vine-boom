@@ -45,12 +45,12 @@ public class Moditems {
     }
 
     public static void onItemRightClick() {
-        public void playSoundFromEntity(
+        playSoundFromEntity(
             null,
             PlayerEntity.player,
             Vineboomsound.VINE_BOOM_SOUND_EVENT,
             SoundCategory.PLAYERS,
-            float 1.0f,
-            float 1.0f);
+            1.0f,
+            1.0f);
     }
 }
