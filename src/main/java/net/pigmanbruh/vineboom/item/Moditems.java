@@ -54,6 +54,10 @@ public class Moditems {
         Registry.register(Registries.SOUND_EVENT, VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
     }
 
+    public Moditems(Settings settings) {
+        super(settings);
+    }
+
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             user.playSound(Moditems.VINE_BOOM_SOUND_EVENT, 1.0f, 1.0f);
