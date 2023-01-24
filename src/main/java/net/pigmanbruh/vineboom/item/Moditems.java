@@ -23,6 +23,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.entity.EntityType;
 
 public class Moditems {
 
@@ -46,6 +47,7 @@ public class Moditems {
 
     public static void onItemRightClick() {
         World.playSound(
+            EntityType.PLAYER,
             Vineboomsound.VINE_BOOM_SOUND_EVENT,
             SoundCategory.PLAYERS,
             1.0f,
