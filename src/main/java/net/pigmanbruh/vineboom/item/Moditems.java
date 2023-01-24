@@ -25,7 +25,7 @@ public class Moditems {
 
     public static final Item VINE_BOOM_ITEM =
       Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "vine_boom_item"),
-        new Item(new FabricItemSettings()));
+        new VineBoomItemFunction(new FabricItemSettings().maxCount(1)));
     
     public static void addItemsToItemGroups() {
         addToItemGroup(ItemGroups.TOOLS, VINE_BOOM_ITEM);
@@ -45,6 +45,6 @@ public class Moditems {
     public static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
 
     public static void registerSounds() {
-        Registry.register(Registries.SOUND_EVENT, VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
+        Registry.register(Registries.SOUND_EVENT, Moditems.VINE_BOOM_SOUND, Moditems.VINE_BOOM_SOUND_EVENT);
     }
 }
