@@ -31,9 +31,9 @@ public class VineBoomItemFunction extends Item {
     }
 
     @Override
-    public static TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
-            World.playSoundFromEntity (
+            public void playSoundFromEntity (
                 null,
                 user,
                 VINE_BOOM_SOUND_EVENT,
