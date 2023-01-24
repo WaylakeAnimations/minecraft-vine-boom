@@ -12,6 +12,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import net.minecraft.util.Hand;
 import net.minecraft.entity.player.ItemCooldownManager;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 
 public class VineBoomItemFunction extends Item {
     public VineBoomItemFunction(Settings settings) {
