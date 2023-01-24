@@ -45,7 +45,10 @@ public class Moditems {
         addItemsToItemGroups();
     }
 
+    public static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
+    public static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
+
     public void onItemRightClick(World world, PlayerEntity playerEntity, Hand hand) {
-        playerEntity.playSound(Vineboomsound.VINE_BOOM_SOUND_EVENT, 1.0f, 1.0f);
+        playerEntity.playSound(Moditems.VINE_BOOM_SOUND_EVENT, 1.0f, 1.0f);
     }
 }
