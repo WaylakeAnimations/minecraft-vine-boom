@@ -1,18 +1,16 @@
 package net.pigmanbruh.vineboom.item.custom;
 
 import net.pigmanbruh.vineboom.item.Moditems;
+import net.pigmanbruh.vineboom.item.custom.PlaySound;
 
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.world.World;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import net.minecraft.util.Hand;
 import net.minecraft.entity.player.ItemCooldownManager;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -33,13 +31,9 @@ public class VineBoomItemFunction extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
-            
+            PlaySound.playSound();
             user.getItemCooldownManager().set(this, 10);
         }
         return super.use(world, user, hand);
-    }
-
-    public void playVineboom() {
-        PlayerEntity.playSound(VINE_BOOM_SOUND_EVENT, SoundCategory.PLAYERS, 1.0f, 1.0f);
     }
 }
