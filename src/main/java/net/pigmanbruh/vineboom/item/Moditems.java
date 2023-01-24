@@ -25,6 +25,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.item.ItemStack;
+import java.util.List;
 
 public class Moditems {
 
@@ -51,10 +52,6 @@ public class Moditems {
 
     public static void registerSounds() {
         Registry.register(Registries.SOUND_EVENT, VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
-    }
-
-    public Moditems(Settings settings) {
-        super(settings);
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
