@@ -45,7 +45,7 @@ public class Moditems {
         addItemsToItemGroups();
     }
 
-    public static void onItemRightClick() {
+    public void onItemRightClick() {
         World.playSoundFromEntity(
             null,
             Entity.PLAYER,
