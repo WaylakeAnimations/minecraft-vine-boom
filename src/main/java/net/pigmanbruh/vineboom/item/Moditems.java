@@ -15,7 +15,6 @@ import net.minecraft.world.World;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
@@ -40,12 +39,5 @@ public class Moditems {
         Main.LOGGER.debug("Registering Mod Items for " + Main.MOD_ID + " mod");
 
         addItemsToItemGroups();
-    }
-
-    public static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
-    public static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
-
-    public static void registerSounds() {
-        Registry.register(Registries.SOUND_EVENT, Moditems.VINE_BOOM_SOUND, Moditems.VINE_BOOM_SOUND_EVENT);
     }
 }

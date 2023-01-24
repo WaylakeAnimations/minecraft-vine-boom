@@ -18,6 +18,13 @@ public class VineBoomItemFunction extends Item {
         super(settings);
     }
     
+    public static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
+    public static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
+
+    public void registerModSounds() {
+        Registry.register(Registries.SOUND_EVENT, VineBoomItemFunction.VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
+    }
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
