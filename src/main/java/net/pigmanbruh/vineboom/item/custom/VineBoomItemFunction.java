@@ -30,7 +30,7 @@ public class VineBoomItemFunction extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
-            PlayerEntity.playSound(VINE_BOOM_SOUND_EVENT, 1.0F, 1.0F);
+            public {PlayerEntity.playSound(VINE_BOOM_SOUND_EVENT, 1.0F, 1.0F)};
             user.getItemCooldownManager().set(this, 10);
         }
         return super.use(world, user, hand);
