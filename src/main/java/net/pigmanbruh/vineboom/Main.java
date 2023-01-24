@@ -13,6 +13,6 @@ public class Main implements ModInitializer {
     @Override
     public void onInitialize() {
         Moditems.registerModItems();
-        Registry.register(Registries.SOUND_EVENT, Vineboomsound.VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
+        Moditems.registerSounds();
     }
 }
