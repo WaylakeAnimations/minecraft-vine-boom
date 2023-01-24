@@ -23,7 +23,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.entity.EntityType;
+import net.minecraft.entity.Entity;
 
 public class Moditems {
 
