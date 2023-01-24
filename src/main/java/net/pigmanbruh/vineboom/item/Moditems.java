@@ -32,8 +32,5 @@ public class Moditems {
         Main.LOGGER.debug("Registering Mod Items for " + Main.MOD_ID + " mod");
 
         addItemsToItemGroups();
-
-    public void playVineboom (PlayerEntity user) {
-        World.playSoundFromEntity (null, user, VINE_BOOM_SOUND_EVENT, SoundCategory.PLAYERS, 1.0f, 1.0f);
     }
 }
