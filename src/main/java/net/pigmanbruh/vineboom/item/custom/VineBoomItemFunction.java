@@ -27,16 +27,16 @@ public class VineBoomItemFunction extends Item {
         Registry.register(Registries.SOUND_EVENT, VineBoomItemFunction.VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
     }
 
-    public static void playVineboom() {
-        PlayerEntity.playSound(VINE_BOOM_SOUND_EVENT, 1.0F, 1.0F);
-    }
-
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
-            VineBoomItemFunction.playVineboom();
+
             user.getItemCooldownManager().set(this, 10);
         }
         return super.use(world, user, hand);
+    }
+
+    public static void playVineboom() {
+        PlayerEntity.playSound(VINE_BOOM_SOUND_EVENT, 1.0F, 1.0F);
     }
 }
