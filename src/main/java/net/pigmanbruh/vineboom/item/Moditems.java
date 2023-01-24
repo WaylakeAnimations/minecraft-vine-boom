@@ -45,7 +45,7 @@ public class Moditems {
         addItemsToItemGroups();
     }
 
-    public void onItemRightClick use(World world, PlayerEntity playerEntity, Hand hand) {
+    public void onItemRightClick(World world, PlayerEntity playerEntity, Hand hand) {
         playerEntity.playSound(Vineboomsound.VINE_BOOM_SOUND_EVENT, 1.0f, 1.0f);
     }
 }
