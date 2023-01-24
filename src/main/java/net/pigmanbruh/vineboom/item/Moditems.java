@@ -48,7 +48,7 @@ public class Moditems {
     public static void onItemRightClick() {
         World.playSoundFromEntity(
             null,
-            EntityType.PLAYER,
+            Entity.PLAYER,
             Vineboomsound.VINE_BOOM_SOUND_EVENT,
             SoundCategory.PLAYERS,
             1.0f,
