@@ -23,6 +23,8 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.item.ItemStack;
 
 public class Moditems {
 
@@ -51,7 +53,9 @@ public class Moditems {
         Registry.register(Registries.SOUND_EVENT, VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
     }
 
-    @Override
+    public Moditems(Settings settings) {
+        super(settings);
+
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             user.playSound(Moditems.VINE_BOOM_SOUND_EVENT, 1.0f, 1.0f);
