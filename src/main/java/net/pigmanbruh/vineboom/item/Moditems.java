@@ -56,7 +56,7 @@ public class Moditems {
     public Moditems(Settings settings) {
         super(settings);
 
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public static TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             user.playSound(Moditems.VINE_BOOM_SOUND_EVENT, 1.0f, 1.0f);
             user.getItemCooldownManager().set(this, 20);
