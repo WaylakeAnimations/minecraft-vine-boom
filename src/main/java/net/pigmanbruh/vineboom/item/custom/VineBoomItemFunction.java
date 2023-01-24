@@ -39,7 +39,7 @@ public class VineBoomItemFunction extends Item {
                 VINE_BOOM_SOUND_EVENT,
                 SoundCategory.PLAYERS,
                 1.0f,
-                1.0f)
+                1.0f);
             user.getItemCooldownManager().set(this, 10);
         }
         return super.use(world, user, hand);
