@@ -1,7 +1,6 @@
 package net.pigmanbruh.vineboom.item;
 
 import net.pigmanbruh.vineboom.Main;
-import net.pigmanbruh.vineboom.sound.Vineboomsound;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
