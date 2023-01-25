@@ -38,7 +38,7 @@ public class VineBoomItemFunction extends Item {
         return super.use(world, user, hand);
     }
 
-    public void playVineBoom (World world, PlayerEntity user, BlockPos blockpos) {
+    public void playVineBoom(World world, PlayerEntity user, BlockPos blockpos) {
         world.playSound(user, blockpos, VINE_BOOM_SOUND_EVENT, SoundCategory.PLAYERS, 1.0F, 1.0F);
     }
 }
