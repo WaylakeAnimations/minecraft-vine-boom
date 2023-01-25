@@ -1,7 +1,7 @@
 package net.pigmanbruh.vineboom;
 
 import net.pigmanbruh.vineboom.item.Moditems;
-import net.pigmanbruh.vineboom.item.custom.VineBoomItemFunction;
+import net.pigmanbruh.vineboom.sound.Sounds;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -14,6 +14,6 @@ public class Main implements ModInitializer {
     @Override
     public void onInitialize() {
         Moditems.registerModItems();
-        VineBoomItemFunction.registerModSounds();
+        Sounds.registerModSounds();
     }
 }
