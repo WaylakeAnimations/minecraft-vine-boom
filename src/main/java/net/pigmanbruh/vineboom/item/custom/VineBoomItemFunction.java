@@ -15,7 +15,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.server.command.CommandManager;
-import net.minecraft.entity.EntityType<T>;
+import net.minecraft.entity.EntityType;
 
 public class VineBoomItemFunction extends Item {
     public VineBoomItemFunction(Settings settings) {
