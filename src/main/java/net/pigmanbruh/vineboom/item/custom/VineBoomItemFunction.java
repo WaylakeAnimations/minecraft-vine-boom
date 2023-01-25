@@ -1,4 +1,5 @@
 package net.pigmanbruh.vineboom.item.custom;
+// This class is used for Vineboom item right click functionality
 
 import net.pigmanbruh.vineboom.sound.Sounds;
 
