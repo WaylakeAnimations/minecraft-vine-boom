@@ -1,10 +1,10 @@
 package net.pigmanbruh.vineboom.sound;
+// This class used for adding and registering mod sound(s)
 
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 
 public class Sounds {
     public static final Identifier VINE_BOOM_SOUND = new Identifier("vineboom:vine_boom_sound");
