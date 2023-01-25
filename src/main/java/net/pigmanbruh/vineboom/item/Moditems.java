@@ -19,7 +19,7 @@ public class Moditems {
     public static final Item VINE_BOOM_ITEM = new VineBoomItemFunction(new FabricItemSettings().maxCount(1));
     
     public static void registerModItems() {
-        Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "vine_boom_item");
+        Registry.register(Registries.ITEM, new Identifier(Main.MOD_ID, "vine_boom_item"));
     }
 
     public static void addItemsToItemGroups() {
