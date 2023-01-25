@@ -33,7 +33,7 @@ public class VineBoomItemFunction extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             CommandManager commandManager = player.getServer().getCommandManager();
-            commandManager.executeWithPrefix(EntityType.PLAYER, "playsound vineboom:vine_boom_sound player @a ~ ~ ~ 1.0 1.0");
+            commandManager.executeWithPrefix(player, "playsound vineboom:vine_boom_sound player @a ~ ~ ~ 1.0 1.0");
             user.getItemCooldownManager().set(this, 10);
         }
         return super.use(world, user, hand);
