@@ -11,6 +11,6 @@ public class Sounds {
     public static SoundEvent VINE_BOOM_SOUND_EVENT = SoundEvent.of(VINE_BOOM_SOUND);
 
     public static void registerModSounds() {
-        Registry.register(Registries.SOUND_EVENT, Sounds.VINE_BOOM_SOUND, Sounds.VINE_BOOM_SOUND_EVENT);
+        Registry.register(Registries.SOUND_EVENT, Sounds.VINE_BOOM_SOUND, VINE_BOOM_SOUND_EVENT);
     }
 }
