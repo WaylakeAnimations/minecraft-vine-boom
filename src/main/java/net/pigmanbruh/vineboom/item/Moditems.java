@@ -1,6 +1,5 @@
 package net.pigmanbruh.vineboom.item;
 
-import net.pigmanbruh.vineboom.Main;
 import net.pigmanbruh.vineboom.item.custom.VineBoomItemFunction;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -26,11 +25,6 @@ public class Moditems {
     
     private static void addToItemGroup(ItemGroup group, Item item) {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
-    }
-    
-    public static void registerModItems() {
-        Main.LOGGER.debug("Registering Mod Items for " + Main.MOD_ID + " mod");
-
         addItemsToItemGroups();
     }
 }
