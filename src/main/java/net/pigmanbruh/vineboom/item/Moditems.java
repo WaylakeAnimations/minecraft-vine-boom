@@ -26,6 +26,9 @@ public class Moditems {
     
     private static void addToItemGroup(ItemGroup group, Item item) {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
+
+    public static void registerModItems() {
+        Main.LOGGER.info("Registering mod items for Vineboom Mod");
         addItemsToItemGroups();
     }
 }
