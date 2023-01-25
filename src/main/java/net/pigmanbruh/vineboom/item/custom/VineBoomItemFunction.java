@@ -30,11 +30,15 @@ public class VineBoomItemFunction extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand, BlockPos blockpos) {
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
-            world.playSound(user, blockpos, VINE_BOOM_SOUND_EVENT, SoundCategory.PLAYERS, 1.0F, 1.0F);
-            user.getItemCooldownManager().set(this, 10);
+            VineBoomItemFunction.playVineBoom();
+            user.getItemCooldownManager().set(this, 5);
         }
         return super.use(world, user, hand);
+    }
+
+    public void playVineBoom (World world, PlayerEntity user, BlockPos blockpos) {
+        world.playSound(user, blockpos, VINE_BOOM_SOUND_EVENT, SoundCategory.PLAYERS, 1.0F, 1.0F);
     }
 }
