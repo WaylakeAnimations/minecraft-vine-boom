@@ -23,8 +23,12 @@ public class Moditems {
         addToItemGroup(ItemGroups.TOOLS, VINE_BOOM_ITEM);
     }
 
+    private static void addToItemGroup(ItemGroup group, Item item) {
+        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
+    }
+
     public static void registerModItems() {
-        Main.LOGGER.info("Registering mod items for Vineboom Mod");
+        Main.LOGGER.info("Vineboom Mod is loaded, ONLY USE FOR TROLLING PURPOSES *insert trollface here* ");
         addItemsToItemGroups();
     }
 }
