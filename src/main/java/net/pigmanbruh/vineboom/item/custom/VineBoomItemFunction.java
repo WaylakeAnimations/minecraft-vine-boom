@@ -14,6 +14,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.sound.SoundCategory;
 
 public class VineBoomItemFunction extends Item {
     public VineBoomItemFunction(Settings settings) {
@@ -28,9 +29,9 @@ public class VineBoomItemFunction extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if(world.isClient() && hand == Hand.MAIN_HAND) {
-            user.playSound(SoundEvent.VINE_BOOM_SOUND_EVENT, 1.0F, 1.0F);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand, VineBoomItemFunction vineboom) {
+        if(!world.isClient() && hand == Hand.MAIN_HAND) {
+            user.playSound(vineboom.VINE_BOOM_SOUND_EVENT, SoundCategory.Players, 1.0F, 1.0F);
             user.getItemCooldownManager().set(this, 10);
         }
         return super.use(world, user, hand);
