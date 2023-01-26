@@ -13,7 +13,7 @@
     "sources": "https://github.com/PigmanYT3531/minecraft-vine-boom"
   },
 
-  "license": "CC0-1.0",
+  "license": "GPL-3.0",
   "icon": "assets/modid/icon.png",
 
   "environment": "*",
