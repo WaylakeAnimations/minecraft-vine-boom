@@ -5,8 +5,7 @@ This is my first mod, the goal of this mod is to add an item that make vine boom
 
 
 
-Do you have some trust issue because your Minecraft account gets stolen because of suspicious mod ?
-(i play skyblock so i understand about your trust issue)
+Do you have some trust issue because of suspicious mod ?
 
 Don't worry, you can check through the source code and even build the mod yourself, here's the steps :
 1. Clone the repository with `git clone https://github.com/PigmanYT3531/minecraft-vine-boom.git`
