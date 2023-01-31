@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "CRC",
+    "RNR",
+    "CRC"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:chiseled_stone_bricks"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "N": {
+      "item": "minecraft:note_block"
+    }
+  },
+  "result": {
+    "item": "vineboom:vine_boom_item",
+    "count": 1
+  }
+}
