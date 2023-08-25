@@ -22,8 +22,7 @@ public class Moditems {
 
     public static void addItemsToItemGroups() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.add(VINE_BOOM_ITEM);
-        });
+            content.add(VINE_BOOM_ITEM)});
 
     public static void registerModItems() {
         Main.LOGGER.info("Vineboom Mod is loaded, ONLY USE FOR TROLLING PURPOSES *insert trollface here* ");
