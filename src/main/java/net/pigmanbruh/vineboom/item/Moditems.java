@@ -21,12 +21,9 @@ public class Moditems {
             new VineBoomItemFunction(new FabricItemSettings().maxCount(1)));
 
     public static void addItemsToItemGroups() {
-        addToItemGroup(ItemGroups.TOOLS, VINE_BOOM_ITEM);
-    }
-
-    private static void addToItemGroup(ItemGroup group, Item item) {
-        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
-    }
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
+            content.add(VINE_BOOM_ITEM);
+        });
 
     public static void registerModItems() {
         Main.LOGGER.info("Vineboom Mod is loaded, ONLY USE FOR TROLLING PURPOSES *insert trollface here* ");
